@@ -1,0 +1,23 @@
+{
+  "name": "Spring Security Demo",
+  "version": "0.0.1-",
+  "homepage": "https://github.com/ricardoerikson/spring-sercurity-demo",
+  "authors": [
+    "Ricardo Erikson <ricardoerikson@gmail.com>"
+  ],
+  "description": "Spring Security Demo",
+  "license": "Apache 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/main/resources/public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angularjs": "~1.4.4",
+    "bootstrap": "~3.3.5"
+  }
+}
