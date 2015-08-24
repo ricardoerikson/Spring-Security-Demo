@@ -34,4 +34,8 @@ public class User {
         return this.firstName;
     }
 
+    public String getLastName() {
+        return this.lastName;
+    }
+
 }
