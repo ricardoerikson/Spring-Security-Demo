@@ -21,7 +21,7 @@ import com.trit.security.jpa.entity.User;
 public class UserRepositoryTest {
 
     @Autowired
-    private UserRepository repository;
+    private IUserRepository repository;
 
     @Before
     public void setUp() {
