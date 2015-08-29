@@ -1,5 +1,7 @@
 package com.trit.security.controllers;
 
+import static org.junit.Assert.*;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -54,6 +56,14 @@ public class UserControllerTest {
         User one = repository.findOne(1L);
         Assert.assertEquals("Jon", one.getFirstName());
         Assert.assertFalse(one.getLastName().equals("Stark"));
+    }
+    
+    @Test
+    public void testGetUser() throws Exception {
+        User user = new User("Jon", "Snow", "youknownothingJonSnow");
+        repository.save(user);
+        
+        mockMvc.perform(MockMvcRequestBuilders.get(WsUserApi.USERS).contentType(MediaType.APPLICATION_JSON_VALUE))
     }
 
 }
