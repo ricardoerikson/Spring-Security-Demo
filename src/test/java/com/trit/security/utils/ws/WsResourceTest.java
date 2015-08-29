@@ -15,8 +15,13 @@ public class WsResourceTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testNullId() {
+    public void testGivingAResourceAndNullId() {
         new WsResource("users", null);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testNullResourceGivingAndId() {
+        new WsResource(null, "1");
     }
 
 }
