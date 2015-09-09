@@ -15,12 +15,12 @@ public class TemplateBuilder {
         return new TemplateBuilder();
     }
 
-    public TemplateBuilder add(String resource, String id) {
+    public TemplateBuilder res(String resource, String id) {
         resources.add(new ResourceTemplate(resource, id));
         return this;
     }
 
-    public TemplateBuilder add(String resource) {
+    public TemplateBuilder res(String resource) {
         resources.add(new ResourceTemplate(resource, false));
         return this;
     }
@@ -39,7 +39,7 @@ public class TemplateBuilder {
     }
 
     public static void main(String[] args) {
-        String build = TemplateBuilder.template().add("api").add("users", "id").build();
+        String build = TemplateBuilder.template().res("api").res("users", "id").build();
         System.out.println(build);
     }
 
